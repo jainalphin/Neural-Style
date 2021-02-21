@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Style transfer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <style>
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+	body{
+		background-color: black;
+		color: white;
+		font-family: Cursive;
+	}
+hr.hr {
+  border-color: gray;
+}	
+	
+	form button{
+  margin: 0;
+  color: #fff;
+  background: #16a085;
+  border: none;
+  width: 508px;
+  height: 50px;
+  margin-top: -20px;
+  margin-left: -4px;
+  border-radius: 4px;
+  border-bottom: 4px solid #117A60;
+  transition: all .2s ease;
+  outline: none;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+form button:hover{
+  background: #149174;
+	color: #0C5645;
+	margin-top: -20px;
+	margin-left: -4px;
+	
+}
+form button:active{
+  border:0;
+}
+	
+  </style>
+</head>
+<body>
+
+<center><h1 style=" padding-top:25px;">NEURAL STYLE</h2></center>
+  <hr class ="hr">
+ <form action="/predict" method="post" enctype="multipart/form-data" >
+	<center>
+	<p style="font-weight: normal; font-size:25px;text-align: center; ">Choose the Image </p>	
+	  <div class ="file1" style="padding-top:25px; border:2px; border-style:dashed; border-width:2px; height:100px; width: 500px;">
+	 
+	 <span class="btn btn-default btn-file" style="background-color: black;color: white;">
+		<input type="file" name="file" required>
+	  </span>
+	  </div>
+	</center>
+<hr class ="hr">
+<div class="container-fluid bg-3 text-center">  
+  <h3>Choose Style Image</h3><br>
+  <div class="row">
+    
+       <div class="col-sm-1"> 
+      
+      </div>
+    <div class="col-sm-2">
+      <p> 
+        <label class="radio-inline"><input type="radio" name="style" id="style" value="1" >Option 1</label>
+</p>
+      <img src="../static/style_image/1.jpg" class="rounded" width="200" height="150" alt="Image">
+      </div>
+    <div class="col-sm-2"> 
+      <p>
+        <label class="radio-inline"><input type="radio" name="style" id="style" value="2" >Option 2</label>
+      </p>
+      
+      <img src="../static/style_image/2.jpg" class="rounded" width="200" height="150" alt="Image">
+    </div>
+    
+    
+     <div class="col-sm-2">
+      <p>
+        <label class="radio-inline"><input type="radio" name="style" id="style"  value="3" >Option 3</label>
+
+      </p>
+      <img src="../static/style_image/3.jpg" class="rounded" width="200" height="150" alt="Image">
+    </div>
+    <div class="col-sm-2"> 
+      <p>
+        <label class="radio-inline"><input type="radio" name="style" id="style" value="4" >Option 4</label>
+
+      </p>
+      <img src="../static/style_image/4.jpg" class="rounded" width="200" height="150"  alt="Image">
+    </div>
+    <div class="col-sm-2">
+      <p>
+        <label class="radio-inline"><input type="radio" name="style" id="style" value="5" >Option 5</label>
+
+      </p>
+      <img src="../static/style_image/5.jpg" class="rounded" width="200" height="150" alt="Image">
+     </div>
+      <div class="col-sm-1">
+       </div>
+      
+    </div>
+  </div>
+<br/>
+<br/><br/>
+<center>
+<p style="font-weight: normal; font-size:20px;text-align: center; ">OR Choose your own style </p>	
+		  <div class ="file1" style="padding:25px; border:2px; border-style:dashed; border-width:2px; height:110px; width: 500px;">
+		  
+		  <span class="btn btn-default btn-file" style=" background-color: black;color: white;" >
+			<input type="file" name="file1" id = "file1">
+		  </span></div>
+<hr class ="hr">
+<br>
+	  <button type="submit" id ="predict">PREDICT</button>
+	</center>
+  </form>
+  
+</div>
+<p style="margin-top:100px; text-align:center;"> Created  By Alphin Jain</a></p>
+
+
+<script>
+
+																																				
+</script>
+</body>
+<!-- Footer -->
+
+
+</html>
